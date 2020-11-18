@@ -1,31 +1,41 @@
 /* Put your style information here! */
 
 body {
+  position: relative;
   width: 100%;
-	background-color: #370617;
-  font-family: "Lato", sans-serif;
+	background-color: white;
+  font-family: agenda-condensed, sans-serif;
   font-size: 18px;
   letter-spacing: 1px;
   word-spacing: 2px;
-  color: #ffba08;
-  font-weight: lighter;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  color: black;
+  font-weight: 300;
   text-align: center;
+  display: flex;
+  overflow-x: hidden;
+}
+
+main {
+  margin-left: min(25%,250px);
+  margin-right: 0px;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.carousel-indicators {
+  color: black;
 }
 
 h0 {
   font-size: 70px;
   letter-spacing: 2px;
   word-spacing: 2px;
-  color: #ffba08;
-  font-weight: bold;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  color: #ba181b;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -33,12 +43,7 @@ h1 {
   font-size: 60px;
   letter-spacing: 2px;
   word-spacing: 2px;
-  color: #9d0208;
-  font-weight: bold;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  color: #ba181b;
   text-align: center;
 }
 
@@ -46,12 +51,7 @@ h2 {
   font-size: 40px;
   letter-spacing: 2px;
   word-spacing: 2px;
-  color: #e85d04;
-  font-weight: bold;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
+  color: #ba181b;
   text-align: center;
 
 }
@@ -60,29 +60,39 @@ h3 {
   font-size: 35px;
   letter-spacing: 2px;
   word-spacing: 2px;
-  color: #f48c06;
+  color: #faa307;
   font-weight: normal;
-  text-decoration: none;
-  font-style: normal;
-  font-variant: normal;
-  text-transform: none;
   text-align: center;
 }
 
 ul {
-  padding-left: 50px;
+  padding-left: 20%;
   list-style-position: inside;
   text-align: left;
   list-style-type: square;
 }
 ol {
-  padding-left: 50px;
+  padding-left: 10%;
   list-style-position: inside;
   text-align: left;
 }
 
-#container {
+.sidebar {
+  background-color: #f5f3f4;
+  padding: 50px;
+  position: fixed;
+  height: 100%;
+  width: 25%;
+  max-width: 250px;
+  text-align: center;
+  justify-content: center;
+  align-items: baseline;
+  z-index: 1;
+}
 
+#container {
+  padding: 2%;
+  text-align: center;
 }
 
 #title{
@@ -97,14 +107,14 @@ ol {
 }
 
 #jumbotron{
-  background: url("./assets/background.jpg") center fixed;
+  background: url("./assets/Brown.jpeg") center fixed;
   background-size: cover;
 }
 
 .small-container{
-  background: url("./assets/background.jpg") center fixed;
+  background: url("./assets/Brown.jpeg") center fixed;
   background-size: cover;
-  height: 50px;
+  height: 30px;
 }
 
 #col{
@@ -112,48 +122,34 @@ ol {
 }
 
 #button{
-  background-color: #f48c06;
+  color: white;
+  background-color: #4d908e;
   border: none;
-  box-shadow: 0 8px #9d0208;
+  box-shadow: 0 8px #277da1;
 }
 
 #button:hover{
-  background-color: #e85d04;
+  background-color: #43aa8b;
 }
 
 #button:active{
   transform: translateY(6px);
-  background-color: #e85d04;
-  box-shadow: 0 4px #6a040f;
+  background-color: #43aa8b;
+  box-shadow: 0 4px #277da1;
 }
 
 #image-link:hover{
   opacity: 70%;
 }
 
-
-#image-link:active{
-  opacity: 70%;
-  background-color: #9d0208;
-}
-
-#navbarDropdown:hover{
-  color: #9d0208;
-}
-
-#dropdown-item:hover{
-  color: white;
-  background-color: #9d0208;
-}
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
 .small_image{
-  max-width: 20vmin;
+  max-width: 45vmin;
   max-height: auto;
 }
+
+.nav-link.active {
+   color: white !important;
+  background-color: #4d908e !important;}
 
 img {
 	min-width: 0;
@@ -169,4 +165,16 @@ img {
 
   }
   .sidenav a {font-size: 18px;}
+}
+
+.carousel .carousel-indicators li{
+  background-color: #4d908e;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234d908e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234d908e' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
